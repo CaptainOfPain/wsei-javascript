@@ -31,3 +31,9 @@ var animals = [
     }
 
 ]
+
+animals.forEach(element => {
+    for(let el in element){
+        console.log(element[el]);
+    }
+})
