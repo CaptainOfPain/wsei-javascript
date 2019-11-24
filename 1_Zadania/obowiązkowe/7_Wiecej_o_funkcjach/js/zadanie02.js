@@ -12,3 +12,8 @@ callOtherFunction(function (a, b) {
     console.log("Wynik", a + b)
 })
 
+
+//moje wywołanie funkcji
+callOtherFunction((a, b) => { 
+	console.log('Wynik', a*b);
+});

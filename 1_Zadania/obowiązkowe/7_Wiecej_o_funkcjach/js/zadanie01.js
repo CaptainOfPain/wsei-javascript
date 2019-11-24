@@ -8,18 +8,19 @@
 //Twoj komentarz ...
 function sortArray() {
 
-    //Twoj komentarz ...
+    //deklaracja zmiennej points (tablica number)
     var points = [41, 3, 6, 1, 114, 54, 64];
 
-    //Twoj komentarz ...
+    //wywołanie metody sort na obiekcie typu array.
     points.sort(function (a, b) {
-        //Twoj komentarz ...
+        //jest to funkcja anonimowa, która ustala w jaki sposó mają się sortować elementy tablicy,
+        // w tym przypadku rosnąco 
         return a - b;
     });
 
-    //Twoj komentarz ...
+    //Zwraca posortowaną tablicę
     return points;
 }
 
-//Twoj komentarz ...
+//Wywolanie metody sortArray();
 sortArray();

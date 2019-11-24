@@ -5,28 +5,28 @@
  */
 
 
-//Twoj komentarz ...
+//deklaracja funkcji
 function jeden() {
 
-    //Twoj komentarz ...
+    //deklaracja zmiennej zmienna1, z wartością 1
     var zmienna1 = 1;
 
-    //Twoj komentarz ...
+    //deklaracja zagnieżdżonej funkcji dwa(), która jest dostępna tylko z funkcji jeden()
     function dwa() {
 
-        //Twoj komentarz ...
+        //Wypisanie w konsoli wartości zmienna1
         console.log(zmienna1);
 
-        //Twoj komentarz ...
+        //deklaracja zmienna 2
         var zmienna2 = 3;
     }
 
-    //Twoj komentarz ...
+    //wywołanie metody dwa()
     dwa();
 
-    //Twoj komentarz ...
+    //Dostaniemy tutaj błąd, ponieważ zmienna2 znajduje się w innym scope'ie i nasza funckja nie ma do niej dostępu
     console.log(zmienna2)
 }
 
-//Twoj komentarz ...
+//Wywołanie funkcji jeden()
 jeden()
