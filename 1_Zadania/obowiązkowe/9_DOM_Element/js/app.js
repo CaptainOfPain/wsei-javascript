@@ -8,5 +8,14 @@ document.addEventListener("DOMContentLoaded", function () {
     /*
     Poniżej napisz kod rozwiązujący zadania
      */
+    getDatasInfo(links);
 
 });
+
+function getDatasInfo(elements) {
+    let datas = [];
+    for(let element of elements) {
+        let data = element.getAttribute('data');
+        console.log(data);
+    }
+}
