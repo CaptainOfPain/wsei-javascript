@@ -37,6 +37,11 @@ document.addEventListener("DOMContentLoaded", function () {
     let element = document.getElementById('mainFooter');
     console.log(getId(element));
     //zad 4
+    console.log(getTags(childElements));
+    //zad 5
+    console.log(getClassInfo(banner));
+    //zad 6
+    setDataDirection(document.querySelector('nav').querySelectorAll('li'));
 
 });
 
@@ -52,4 +57,28 @@ function getDatasInfo(elements) {
 
 function getId(element){
     return element.getAttribute('id');
+}
+
+function getTags(elements) {
+    var tags = [];
+    for(var i = 0; i < elements.length; i++) {
+        tags.push(elements[i].tagName);
+    }
+
+    return tags;
+}
+function getClassInfo(element) {
+    var classes = [];
+    classes.push(element.classList);
+    for(var i = 0; i < element.childNodes.length; i++) {
+        classes.push(element.childNodes[i].classList);
+    }
+
+    return classes;
+}
+
+function setDataDirection(elements) {
+    for(var i = 0; i < elements.length; i++) {
+        elements[i].dataset.direction = 'top';
+    }
 }
