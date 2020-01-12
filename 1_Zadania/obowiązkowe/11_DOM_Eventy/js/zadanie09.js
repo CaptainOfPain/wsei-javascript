@@ -20,9 +20,12 @@ document.addEventListener("DOMContentLoaded", function () {
       // Tutaj this wskazuje na element Window, bo funkcja została
       //wywołana bez żadnego kontekstu.
       console.log("innerFuncOne: ", this);
+      event.target.style.backgroundColor = 'red';
     }
     innerFuncOne();
 
   });
-
 })
+
+//Odp.: Aby odwołać się do elementu b w funkcji innerFuncOne, odwołałbym się do
+//event.target, ponieważ tam znajduje się nasz element, na którym został wystrzelon event.
