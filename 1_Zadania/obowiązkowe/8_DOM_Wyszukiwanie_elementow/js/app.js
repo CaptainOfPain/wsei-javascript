@@ -7,49 +7,30 @@ document.addEventListener("DOMContentLoaded", function () {
     //zadanie 1
     //1
     let firstId = document.getElementById('home');
-    let secondId = home;
+    let secondId = document.querySelector('#home');
 
     console.log(firstId, secondId);
 
     //2
-    let elementsLi = document.getElementsByTagName('li');
-    let elementArray = Array.prototype.slice.call(elementsLi, 0);
-    let liElement = elementArray.filter(x => x.getAttribute('data-direction'))[0];
+    let liElement = document.querySelector('li[data-direction]');
     console.log(liElement);
     //3
-    let blockElement = document.getElementsByClassName('block')[0];
+    let blockElement = document.querySelector('.block');
     console.log(blockElement);
 
 
     //zadanie 2
     //1
-    let navs = document.getElementsByTagName('nav');
-    navs = Array.prototype.slice.call(navs, 0);
-    let liElements = [];
-    navs.forEach(x => {
-        liElements.push(x.querySelector('li'));
-    })
+    let liElements = document.querySelectorAll('nav li');
     console.log(liElements.length, 'li');
     //2
-    let divs = document.getElementsByTagName('div');
-    let paragraphs = [];
-    for(let i = 0; i < divs.length; i++) {
-        let x = divs[i].querySelector('p');
-        paragraphs.push(x);
-    }
-    console.log(paragraphs.length, 'p');
+    let divsP = document.querySelectorAll('div p');
+    console.log(divsP.length, 'p');
     //3
-    let articles = document.getElementsByTagName('article');
-    articles = Array.prototype.slice.call(articles, 0);
-    let divElements = [];
-    articles.forEach(x => {
-        divElements.push(x.querySelector('li'));
-    })
+    let divElements = document.querySelectorAll('article div');
     console.log(divElements.length, 'divs');
     //zadanie3
-    let articleElements = document.getElementsByTagName('article');
-    articleElements = Array.prototype.slice.call(articleElements, 0);
-    let firstElement = articleElements.filter(x => x.className === 'first')[0];
+    let firstElement = document.querySelector('article.first');
     console.log(firstElement.querySelector('h1') == null ? 0 : firstElement.querySelector('h1').length, 'h1');
 });
 
